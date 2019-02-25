@@ -166,9 +166,14 @@
 - a for/of loop can also be used on strings. Like codePointAt, this type of loop was introduced at a time where people were acutely aware of the problems with UTF-16. When you use it to loop over a string, it gives you real characters, not code units.
 - If you have a character (which will be a string of one or two code units), you can use codePointAt(0) to get its code.
 
+#### THE SECRET LIFE OF OBJECTS
+-
+-
+-
 
-
-#### szdgwe
+#### keyword `this` deep dive
+- The value of `this` is usually determined by a functions execution context. Execution context simply means how a function is called.
+- It’s important to know that `this` may be different (refer to something different) each time the function is called.
 
  
   
