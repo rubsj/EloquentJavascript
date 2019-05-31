@@ -175,7 +175,17 @@
 - The value of `this` is usually determined by a functions execution context. Execution context simply means how a function is called.
 - It’s important to know that `this` may be different (refer to something different) each time the function is called.
 
- 
+#### Events
+- `onMouseDown` will trigger when either the left or right (or middle) is pressed.
+- `onMouseUp` will trigger when any button is released.
+- `onMouseDown` will trigger even when the mouse is clicked on the object then moved off of it,
+- while `onMouseUp` will trigger if you click and hold the button elsewhere, then release it above the object.
+- `onClick` will only trigger when the left mouse button is pressed and released on the same object.
+- In case you care about order, if the same object has all 3 events set, it's onMouseDown, onMouseUp, then  onClick. Each even should only trigger once though.
+- onclick vs addEventListener
+  - `onclick` is just a property, and like all object properties, if you write on more than once, it will be overwritten. 
+  - With addEventListener() instead, we can simply bind an event handler to the element, and we can call it each time we need it without being worried of any overwritten properties.
+- keyboard events are applicable on the elements that are in focus. To give any element a focus set `tabIndex` property on the element
   
   
   
